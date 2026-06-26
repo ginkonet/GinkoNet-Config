@@ -15,7 +15,7 @@
       ],
       "allowFetchTxt": false,
       "bagItProfileInfo": {
-        "bagItProfileIdentifier": "{clay will supply later}",
+        "bagItProfileIdentifier": "https://raw.githubusercontent.com/ginkonet/GinkoNet-Config/refs/heads/main/GinkoNet-DART-Settings.json",
         "bagItProfileVersion": "1.3.0",
         "contactEmail": "axp1175@case.edu",
         "contactName": "GinkoNet Workflow Working Group",
