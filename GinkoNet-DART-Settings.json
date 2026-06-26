@@ -1,19 +1,13 @@
 {
   "id": "00000000-0000-0000-0000-000000000000",
-  "appSettings": [
-    {
-      "id": "5ad1da32-ae59-4868-be4a-99e9eaf5c985",
-      "name": "Bagging Directory",
-      "value": "\\\\ads.case.edu\\ul\\Preservation-Masters\\Archivematica-Output\\DartBagging",
-      "help": "Where should DART put the bags it builds?"
-    }
-  ],
+  "appSettings": [],
   "bagItProfiles": [
     {
       "id": "386dbd66-598b-46e2-85ea-745729b3ed42",
-      "name": "GINKOnet",
-      "description": "GINKOnet Unique Profile for Consistent Deposit to Distributed Digital Preservation Services (BTR)",
+      "name": "GinkoNet",
+      "description": "GinkoNet Unique Profile for Consistent Deposit to Distributed Digital Preservation Services (BTR)",
       "acceptBagItVersion": [
+        "0.97",
         "1.0"
       ],
       "acceptSerialization": [
@@ -21,21 +15,35 @@
       ],
       "allowFetchTxt": false,
       "bagItProfileInfo": {
-        "bagItProfileIdentifier": "https://raw.githubusercontent.com/APTrust/dart/master/profiles/btr-v0.1.json",
+        "bagItProfileIdentifier": "{clay will supply later}",
         "bagItProfileVersion": "1.3.0",
         "contactEmail": "axp1175@case.edu",
-        "contactName": "GINKOnet Workflow Working Group",
-        "externalDescription": "GINKOnet Unique Profile for Consistent Deposit to Distributed Digital Preservation Services (BTR)",
-        "sourceOrganization": "GINKOnet, based on Michigan Digital Preservation Network's Beyond the Repository Bagit Profile",
+        "contactName": "GinkoNet Workflow Working Group",
+        "externalDescription": "GinkoNet Unique Profile for Consistent Deposit to Distributed Digital Preservation Services (BTR)",
+        "sourceOrganization": "GinkoNet",
         "version": "0.1"
       },
-      "manifestsRequired": [],
-      "manifestsAllowed": [
+      "manifestsRequired": [
         "sha256"
       ],
-      "tagManifestsRequired": [],
-      "tagManifestsAllowed": [
+      "manifestsAllowed": [
+        "md5",
+        "sha1",
+        "sha224",
+        "sha256",
+        "sha384",
+        "sha512"
+      ],
+      "tagManifestsRequired": [
         "sha256"
+      ],
+      "tagManifestsAllowed": [
+        "md5",
+        "sha1",
+        "sha224",
+        "sha256",
+        "sha384",
+        "sha512"
       ],
       "tagFilesAllowed": [
         "*"
@@ -87,7 +95,7 @@
           ],
           "defaultValue": "",
           "userValue": "",
-          "help": "Organization transferring the content. Used as LOCKSS publisher name",
+          "help": "GinkoNet Member organization transferring the content",
           "isBuiltIn": false,
           "isUserAddedFile": false,
           "isUserAddedTag": false,
@@ -101,7 +109,7 @@
           "values": [],
           "defaultValue": "",
           "userValue": "",
-          "help": "",
+          "help": "Suggested Use: Sequential Number for Multiple Bag Collection and total number of Bags in the collection, formatted X of Y  (ex. 1 of 10)",
           "isBuiltIn": false,
           "isUserAddedFile": false,
           "isUserAddedTag": false,
@@ -113,9 +121,9 @@
           "tagName": "Bag-Group-Identifier",
           "required": false,
           "values": [],
-          "defaultValue": null,
+          "defaultValue": "",
           "userValue": "",
-          "help": "A sender-supplied identifier for the set, if any, of bags to which it logically belongs. Used as Journal Title by LOCKSS. If blank, defaults to External-Identifier for LOCKSS.",
+          "help": "Suggested Use: Collection Identifier or Name",
           "isBuiltIn": false,
           "isUserAddedFile": false,
           "isUserAddedTag": false,
@@ -171,7 +179,7 @@
           "values": [],
           "defaultValue": "",
           "userValue": "",
-          "help": "Person at the source organization who is depositing the bag",
+          "help": "Required Use: Individual at the source organization who is depositing the bag",
           "isBuiltIn": false,
           "isUserAddedFile": false,
           "isUserAddedTag": false,
@@ -183,9 +191,9 @@
           "tagName": "External-Description",
           "required": false,
           "values": [],
-          "defaultValue": null,
+          "defaultValue": "",
           "userValue": "",
-          "help": "A brief explanation of the contents and provenance.",
+          "help": "Recommended Use: A brief explanation of the contents and provenance",
           "isBuiltIn": false,
           "isUserAddedFile": false,
           "isUserAddedTag": false,
@@ -195,11 +203,11 @@
           "id": "7e309443-3fbb-445e-b9e0-baee41543427",
           "tagFile": "bag-info.txt",
           "tagName": "External-Identifier",
-          "required": true,
+          "required": false,
           "values": [],
           "defaultValue": "",
           "userValue": "",
-          "help": "Use GINKOnet naming convention for this identifer",
+          "help": "Recommended Use: A sender-supplied identifier for the bag",
           "isBuiltIn": false,
           "isUserAddedFile": false,
           "isUserAddedTag": false,
@@ -213,7 +221,7 @@
           "values": [],
           "defaultValue": "",
           "userValue": "",
-          "help": "A sender-local explanation of the contents and provenance.",
+          "help": "Suggested Use: A sender-local explanation of the contents and provenance",
           "isBuiltIn": false,
           "isUserAddedFile": false,
           "isUserAddedTag": false,
@@ -227,7 +235,7 @@
           "values": [],
           "defaultValue": "",
           "userValue": "",
-          "help": "An alternate sender-specific identifier for the content and/or bag.",
+          "help": "Suggested Use: An alternate sender-specific identifier for the content and/or bag",
           "isBuiltIn": false,
           "isUserAddedFile": false,
           "isUserAddedTag": false,
@@ -246,6 +254,20 @@
           "isUserAddedFile": false,
           "isUserAddedTag": false,
           "wasAddedForJob": false
+        },
+        {
+          "id": "ae807498-34af-4330-80f6-498bbf9b5963",
+          "tagFile": "bag-info.txt",
+          "tagName": "Notes",
+          "required": false,
+          "values": [],
+          "defaultValue": "",
+          "userValue": "",
+          "help": "",
+          "isBuiltIn": false,
+          "isUserAddedFile": false,
+          "isUserAddedTag": true,
+          "wasAddedForJob": false
         }
       ],
       "serialization": "required",
@@ -256,20 +278,5 @@
   ],
   "questions": [],
   "remoteRepositories": [],
-  "storageServices": [
-    {
-      "id": "27d5cd30-8e83-4dd1-8a01-1fa19326833d",
-      "name": "GINKOnet Staging",
-      "description": "GINKOnet staging server",
-      "protocol": "sftp",
-      "host": "sullockss-sftp-a.stanford.edu",
-      "port": 22,
-      "bucket": "/upload",
-      "login": "",
-      "password": "",
-      "loginExtra": "",
-      "allowsUpload": true,
-      "allowsDownload": true
-    }
-  ]
+  "storageServices": []
 }
